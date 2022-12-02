@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OpenSAP - Developing Web Apps with SAPUI5</title>
+    <script
+    id="sap-ui-bootstrap"
+    src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_bluecrystal"
+    data-sap-ui-libs="sap.m"
+    data-sap-ui-compatVersion="edge"
+    data-sap-ui-resourceroots='{"karacraft.ui5" : "./"}'>
+    // data-sap-ui-preload="async">
+</script>
+
+
+<script>
+    sap.ui.getCore().attachInit(function () {
+        //  1-This is Basic
+        // alert("SAPUI5 is ready");
+
+        //  2-We can directly use Sap Library Here
+        // var oImage = new sap.m.Image({
+        //     src: "https://propakistani.pk/lens/wp-content/uploads/2019/08/mehwish-hayat-feat.jpg"
+        // }).placeAt('content')
+        // oImage.setHeight("300px")
+
+        //  3-We can initiate xmlview here too
+        // sap.ui.xmlview({
+        //     // This will show view
+        //     viewName: "karacraft.ui5.view.App"
+        //  }).placeAt('content')
+
+        //  4-We can use Component Controller for Configurable Application
+        //  This will call for manifest.json (Descriptor File) and Component Controller as well
+        //  It is mandatory to add Component.js in root directory with index.html
+        new sap.ui.core.ComponentContainer({
+            name: 'karacraft.ui5'
+        }).placeAt('content')
+
+    });
+</script>
+</head>
+<body class="sapUiBody" id="content">
+</body>
+
+</html>
